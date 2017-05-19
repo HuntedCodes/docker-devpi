@@ -1,0 +1,11 @@
+version: '2'
+services:
+  devpi:
+    build: .
+    image: devpi
+    ports:
+      - "80/tcp"
+    volumes:
+      - ./devpi:/data/devpi
+      - ./nginx/sites-enabled:/etc/nginx/sites-enabled:ro
+    container_name: devpi
