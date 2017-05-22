@@ -16,9 +16,29 @@ For more information on this setup, read the related blog post,
 
 ### Server
 
-The only thing to do on the server side is run `docker-compose up`. The
-container listens for requests on port 80.
 
+### Using Docker Compose
+
+The only thing to do on the server side is run `docker-compose up`. The
+container listens for requests on port 8001.
+
+```
+docker-compose up
+```
+
+### Using Docker Swarm Mode
+
+Build the image.
+
+```
+docker build -t devpi .
+```
+
+Deploy the container to the swarm.
+
+```
+docker stack deploy -c docker-compose.yml pycache
+```
 
 ### Client
 

@@ -6,3 +6,5 @@ bootstrap_salt.sh
 *.img
 *.qcow2
 *.sw*
+
+.devpi
